@@ -1,0 +1,419 @@
+[
+  {
+    "s3Key": "sdk/hivemq/data/1772314981719.json",
+    "lastModified": "2026-02-28T21:43:02.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/hasith-PC/events",
+      "data": {
+        "time": "2026-02-28 16:43:01",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "21276406",
+        "state": 51,
+        "flags": 0,
+        "repeat": 10,
+        "pressure_kPa": 266.75,
+        "temperature_C": 27,
+        "maybe_battery": 26,
+        "mic": "CRC"
+      },
+      "timestamp": 1772314981
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772314979058.json",
+    "lastModified": "2026-02-28T21:43:00.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/hasith-PC/events",
+      "data": {
+        "time": "2026-02-28 16:42:58",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "212a2f74",
+        "state": 51,
+        "flags": 0,
+        "repeat": 11,
+        "pressure_kPa": 259.875,
+        "temperature_C": 24,
+        "maybe_battery": 24,
+        "mic": "CRC"
+      },
+      "timestamp": 1772314979
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772314979086.json",
+    "lastModified": "2026-02-28T21:43:00.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/hasith-PC/events",
+      "data": {
+        "time": "2026-02-28 16:42:58",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "212a2f74",
+        "state": 51,
+        "flags": 0,
+        "repeat": 8,
+        "pressure_kPa": 259.875,
+        "temperature_C": 24,
+        "maybe_battery": 24,
+        "mic": "CRC"
+      },
+      "timestamp": 1772314979
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772314954994.json",
+    "lastModified": "2026-02-28T21:42:36.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/hasith-PC/events",
+      "data": {
+        "time": "2026-02-28 16:42:34",
+        "model": "Renault",
+        "type": "TPMS",
+        "id": "05d092",
+        "flags": "36",
+        "pressure_kPa": 276.75,
+        "temperature_C": 24,
+        "mic": "CRC"
+      },
+      "timestamp": 1772314954
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772314787395.json",
+    "lastModified": "2026-02-28T21:39:48.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/hasith-pc/events",
+      "data": {
+        "time": "2026-02-28 15:29:02",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "41884190",
+        "state": 48,
+        "flags": 12,
+        "repeat": 3,
+        "pressure_kPa": 254.375,
+        "temperature_C": 29,
+        "maybe_battery": 39,
+        "mic": "CRC"
+      },
+      "timestamp": 1772314787
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313948217.json",
+    "lastModified": "2026-02-28T21:25:49.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:25:47",
+        "model": "Citroen",
+        "type": "TPMS",
+        "id": "8cd629fa",
+        "state": "dc",
+        "flags": 0,
+        "repeat": 9,
+        "pressure_kPa": 135.036,
+        "temperature_C": 28,
+        "maybe_battery": 46,
+        "mic": "CHECKSUM"
+      },
+      "timestamp": 1772313948
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313948251.json",
+    "lastModified": "2026-02-28T21:25:49.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:25:47",
+        "model": "Citroen",
+        "type": "TPMS",
+        "id": "8cd629fa",
+        "state": "dc",
+        "flags": 0,
+        "repeat": 11,
+        "pressure_kPa": 135.036,
+        "temperature_C": 28,
+        "maybe_battery": 46,
+        "mic": "CHECKSUM"
+      },
+      "timestamp": 1772313948
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313909986.json",
+    "lastModified": "2026-02-28T21:25:11.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:25:08",
+        "model": "Schrader",
+        "type": "TPMS",
+        "flags": "07",
+        "id": "0EFB373",
+        "pressure_kPa": 227.5,
+        "temperature_C": 25,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313909
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313910053.json",
+    "lastModified": "2026-02-28T21:25:11.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:25:09",
+        "model": "Schrader",
+        "type": "TPMS",
+        "flags": "07",
+        "id": "0EFB373",
+        "pressure_kPa": 227.5,
+        "temperature_C": 25,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313910
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313909481.json",
+    "lastModified": "2026-02-28T21:25:10.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:25:08",
+        "model": "Schrader",
+        "type": "TPMS",
+        "flags": "07",
+        "id": "0EFB373",
+        "pressure_kPa": 227.5,
+        "temperature_C": 25,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313909
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313909516.json",
+    "lastModified": "2026-02-28T21:25:10.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:25:08",
+        "model": "Schrader",
+        "type": "TPMS",
+        "flags": "07",
+        "id": "0EFB373",
+        "pressure_kPa": 227.5,
+        "temperature_C": 25,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313909
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313909943.json",
+    "lastModified": "2026-02-28T21:25:10.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:25:08",
+        "model": "Schrader",
+        "type": "TPMS",
+        "flags": "07",
+        "id": "0EFB373",
+        "pressure_kPa": 227.5,
+        "temperature_C": 25,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313909
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313743220.json",
+    "lastModified": "2026-02-28T21:22:24.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:22:22",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "014621d6",
+        "state": 48,
+        "flags": 0,
+        "repeat": 1,
+        "pressure_kPa": 251.625,
+        "temperature_C": 19,
+        "maybe_battery": 23,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313743
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313743262.json",
+    "lastModified": "2026-02-28T21:22:24.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:22:22",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "014621d6",
+        "state": 48,
+        "flags": 0,
+        "repeat": 2,
+        "pressure_kPa": 251.625,
+        "temperature_C": 19,
+        "maybe_battery": 23,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313743
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313729590.json",
+    "lastModified": "2026-02-28T21:22:10.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:22:08",
+        "model": "Abarth-124Spider",
+        "type": "TPMS",
+        "id": "0ed6dfb5",
+        "flags": "67",
+        "pressure_kPa": 242.88,
+        "temperature_C": 28,
+        "status": 33,
+        "mic": "CHECKSUM"
+      },
+      "timestamp": 1772313729
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313519345.json",
+    "lastModified": "2026-02-28T21:18:40.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:18:38",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "1255c722",
+        "state": 48,
+        "flags": 0,
+        "repeat": 9,
+        "pressure_kPa": 232.375,
+        "temperature_C": 24,
+        "maybe_battery": 27,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313519
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313487888.json",
+    "lastModified": "2026-02-28T21:18:08.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:18:07",
+        "model": "Citroen",
+        "type": "TPMS",
+        "id": "c429969d",
+        "state": "dd",
+        "flags": 0,
+        "repeat": 11,
+        "pressure_kPa": 118.668,
+        "temperature_C": 16,
+        "maybe_battery": 50,
+        "mic": "CHECKSUM"
+      },
+      "timestamp": 1772313487
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313471633.json",
+    "lastModified": "2026-02-28T21:17:52.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:17:50",
+        "model": "Abarth-124Spider",
+        "type": "TPMS",
+        "id": "d401c22a",
+        "flags": "62",
+        "pressure_kPa": 264.96,
+        "temperature_C": 148,
+        "status": 78,
+        "mic": "CHECKSUM"
+      },
+      "timestamp": 1772313471
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313471677.json",
+    "lastModified": "2026-02-28T21:17:52.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:17:50",
+        "model": "Hyundai-VDO",
+        "type": "TPMS",
+        "id": "01c22a62",
+        "state": 212,
+        "flags": 12,
+        "repeat": 0,
+        "pressure_kPa": 272.25,
+        "temperature_C": 28,
+        "maybe_battery": 23,
+        "mic": "CRC"
+      },
+      "timestamp": 1772313471
+    }
+  },
+  {
+    "s3Key": "sdk/hivemq/data/1772313471745.json",
+    "lastModified": "2026-02-28T21:17:52.000Z",
+    "data": {
+      "source": "hivemq",
+      "original_topic": "rtl_433/raspberrypi/events",
+      "data": {
+        "time": "2026-02-28 16:17:50",
+        "model": "Truck",
+        "type": "TPMS",
+        "id": "401c22a6",
+        "wheel": 44,
+        "pressure_kPa": 3172,
+        "temperature_C": 225,
+        "state": 13,
+        "flags": 0,
+        "mic": "CHECKSUM"
+      },
+      "timestamp": 1772313471
+    }
+  }
+]

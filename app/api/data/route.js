@@ -32,7 +32,7 @@ export async function GET() {
     // Get the last 5 objects to have some history if needed, or just the latest
     const sortedObjects = [...listResp.Contents].sort(
       (a, b) => (b.LastModified?.getTime() || 0) - (a.LastModified?.getTime() || 0)
-    ).slice(0, 5);
+    ).slice(0, 101);
 
     const dataPromises = sortedObjects.map(async (obj) => {
       const getResp = await s3Client.send(

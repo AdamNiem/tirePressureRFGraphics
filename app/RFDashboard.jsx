@@ -9,44 +9,38 @@ const PUBLIC_KEY = '1idBq3T9KsMrIZ385yb';
 const BRANDS = [
   { name: "Hyundai", logo: `https://cdn.brandfetch.io/hyundai.com?c=${PUBLIC_KEY}` },
   { name: "Toyota", logo: `https://cdn.brandfetch.io/toyota.com?c=${PUBLIC_KEY}` },
+  { name: "Efergy", logo: `https://cdn.brandfetch.io/efergy.com?c=${PUBLIC_KEY}` },
+  { name: "Honda", logo: `https://cdn.brandfetch.io/honda.com?c=${PUBLIC_KEY}` },
+  { name: "ThermoPro", logo: `https://cdn.brandfetch.io/ithermopro.com?c=${PUBLIC_KEY}` },
+  { name: "LaCrosse", logo: `https://cdn.brandfetch.io/lacrossetechnology.com?c=${PUBLIC_KEY}` },
+  { name: "Kerui", logo: `https://cdn.brandfetch.io/secukerui.com?c=${PUBLIC_KEY}` },
+  { name: "Oregon Scientific", logo: `https://cdn.brandfetch.io/oregonscientific.com?c=${PUBLIC_KEY}` },
+  { name: "Honeywell", logo: `https://cdn.brandfetch.io/honeywell.com?c=${PUBLIC_KEY}` },
+  { name: "SimpliSafe", logo: `https://cdn.brandfetch.io/simplisafe.com?c=${PUBLIC_KEY}` },
+  { name: "Porsche", logo: `https://cdn.brandfetch.io/porsche.com?c=${PUBLIC_KEY}` },
   { name: "Ford", logo: `https://cdn.brandfetch.io/ford.com?c=${PUBLIC_KEY}` },
-  { name: "Chevrolet", logo: `https://cdn.brandfetch.io/chevrolet.com?c=${PUBLIC_KEY}` },
-  { name: "Mercedes", logo: `https://cdn.brandfetch.io/mercedes-benz.com?c=${PUBLIC_KEY}` },
+  { name: "Philips", logo: `https://cdn.brandfetch.io/philips.com?c=${PUBLIC_KEY}` },
+  { name: "Nissan", logo: `https://cdn.brandfetch.io/nissan-global.com?c=${PUBLIC_KEY}` },
+  { name: "Citroen", logo: `https://cdn.brandfetch.io/citroen.com?c=${PUBLIC_KEY}` },
+  { name: "Bresser", logo: `https://cdn.brandfetch.io/bresser.de?c=${PUBLIC_KEY}` },
+  { name: "EcoWitt", logo: `https://cdn.brandfetch.io/ecowitt.com?c=${PUBLIC_KEY}` },
+  { name: "Inkbird", logo: `https://cdn.brandfetch.io/inkbird.com?c=${PUBLIC_KEY}` },
+  { name: "Govee", logo: `https://cdn.brandfetch.io/govee.com?c=${PUBLIC_KEY}` },
   { name: "BMW", logo: `https://cdn.brandfetch.io/bmw.com?c=${PUBLIC_KEY}` },
   { name: "Audi", logo: `https://cdn.brandfetch.io/audi.com?c=${PUBLIC_KEY}` },
-  { name: "Tesla", logo: `https://cdn.brandfetch.io/tesla.com?c=${PUBLIC_KEY}` },
-  { name: "Honda", logo: `https://cdn.brandfetch.io/honda.com?c=${PUBLIC_KEY}` },
-  { name: "Nissan", logo: `https://cdn.brandfetch.io/nissan-global.com?c=${PUBLIC_KEY}` },
-  { name: "Volkswagen", logo: `https://cdn.brandfetch.io/vw.com?c=${PUBLIC_KEY}` },
+  { name: "Ikea", logo: `https://cdn.brandfetch.io/ikea.com?c=${PUBLIC_KEY}` },
+  { name: "Somfy", logo: `https://cdn.brandfetch.io/somfy.com?c=${PUBLIC_KEY}` },
+  { name: "Acurite", logo: `https://cdn.brandfetch.io/acurite.com?c=${PUBLIC_KEY}` },
+  { name: "Emos", logo: `https://cdn.brandfetch.io/emos.eu?c=${PUBLIC_KEY}` },
+  { name: "Telldus", logo: `https://cdn.brandfetch.io/telldus.com?c=${PUBLIC_KEY}` },
+  { name: "Silvercrest", logo: `https://cdn.brandfetch.io/lidl.de?c=${PUBLIC_KEY}` }, // Silvercrest is a Lidl brand
+  { name: "Vevor", logo: `https://cdn.brandfetch.io/vevor.com?c=${PUBLIC_KEY}` },
   { name: "Kia", logo: `https://cdn.brandfetch.io/kia.com?c=${PUBLIC_KEY}` },
-  { name: "Mazda", logo: `https://cdn.brandfetch.io/mazda.com?c=${PUBLIC_KEY}` },
-  { name: "Subaru", logo: `https://cdn.brandfetch.io/subaru.com?c=${PUBLIC_KEY}` },
-  { name: "Lexus", logo: `https://cdn.brandfetch.io/lexus.com?c=${PUBLIC_KEY}` },
-  { name: "Porsche", logo: `https://cdn.brandfetch.io/porsche.com?c=${PUBLIC_KEY}` },
-  { name: "Ferrari", logo: `https://cdn.brandfetch.io/ferrari.com?c=${PUBLIC_KEY}` },
-  { name: "Lamborghini", logo: `https://cdn.brandfetch.io/lamborghini.com?c=${PUBLIC_KEY}` },
-  { name: "Jeep", logo: `https://cdn.brandfetch.io/jeep.com?c=${PUBLIC_KEY}` },
-  { name: "Dodge", logo: `https://cdn.brandfetch.io/dodge.com?c=${PUBLIC_KEY}` },
-  { name: "Volvo", logo: `https://cdn.brandfetch.io/volvocars.com?c=${PUBLIC_KEY}` },
-  { name: "Land Rover", logo: `https://cdn.brandfetch.io/landrover.com?c=${PUBLIC_KEY}` },
-  { name: "Jaguar", logo: `https://cdn.brandfetch.io/jaguar.com?c=${PUBLIC_KEY}` },
-  { name: "Mitsubishi", logo: `https://cdn.brandfetch.io/mitsubishi-motors.com?c=${PUBLIC_KEY}` },
-  { name: "Cadillac", logo: `https://cdn.brandfetch.io/cadillac.com?c=${PUBLIC_KEY}` },
-  { name: "GMC", logo: `https://cdn.brandfetch.io/gmc.com?c=${PUBLIC_KEY}` },
-  { name: "Ram", logo: `https://cdn.brandfetch.io/ramtrucks.com?c=${PUBLIC_KEY}` },
-  { name: "Chrysler", logo: `https://cdn.brandfetch.io/chrysler.com?c=${PUBLIC_KEY}` },
-  { name: "Fiat", logo: `https://cdn.brandfetch.io/fiat.com?c=${PUBLIC_KEY}` },
-  { name: "Alfa Romeo", logo: `https://cdn.brandfetch.io/alfaromeo.com?c=${PUBLIC_KEY}` },
-  { name: "Bentley", logo: `https://cdn.brandfetch.io/bentleymotors.com?c=${PUBLIC_KEY}` },
-  { name: "Rolls-Royce", logo: `https://cdn.brandfetch.io/rolls-royce.com?c=${PUBLIC_KEY}` },
-  { name: "Aston Martin", logo: `https://cdn.brandfetch.io/astonmartin.com?c=${PUBLIC_KEY}` },
-  { name: "McLaren", logo: `https://cdn.brandfetch.io/mclaren.com?c=${PUBLIC_KEY}` },
-  { name: "Mini", logo: `https://cdn.brandfetch.io/mini.com?c=${PUBLIC_KEY}` },
-  { name: "Infiniti", logo: `https://cdn.brandfetch.io/infiniti.com?c=${PUBLIC_KEY}` },
-  { name: "Acura", logo: `https://cdn.brandfetch.io/acura.com?c=${PUBLIC_KEY}` },
-  { name: "Rivian", logo: `https://cdn.brandfetch.io/rivian.com?c=${PUBLIC_KEY}` },
-  { name: "Lucid", logo: `https://cdn.brandfetch.io/lucidmotors.com?c=${PUBLIC_KEY}` },
-  { name: "Polestar", logo: `https://cdn.brandfetch.io/polestar.com?c=${PUBLIC_KEY}` }
+  { name: "Renault", logo: `https://cdn.brandfetch.io/renaultgroup.com?c=${PUBLIC_KEY}` },
+  { name: "Yale", logo: `https://cdn.brandfetch.io/yalehome.com?c=${PUBLIC_KEY}` },
+  { name: "Insteon", logo: `https://cdn.brandfetch.io/insteon.com?c=${PUBLIC_KEY}` },
+  { name: "Danfoss", logo: `https://cdn.brandfetch.io/danfoss.com?c=${PUBLIC_KEY}` },
+  { name: "Garmin", logo: `https://cdn.brandfetch.io/garmin.com?c=${PUBLIC_KEY}` }
 ];
 
 const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#f97316'];
@@ -164,7 +158,7 @@ const RFDashboard = () => {
             [interval]: (prev[interval] || 0) + 1
           }));
 
-          setRecentBrands(prev => [{ brand: p.model, logo: p.logo, timestamp: p.timestamp }, ...prev.slice(0, 11)]);
+          setRecentBrands(prev => [{ brand: p.model, logo: p.logo, timestamp: p.timestamp }, ...prev.slice(0, 101)]);
         });
         setError(null);
       }
@@ -205,7 +199,7 @@ const RFDashboard = () => {
           ...prev,
           [timeKey]: (prev[timeKey] || 0) + newData.length
         }));
-        setRecentBrands(prev => [{ brand, logo, timestamp: Date.now() }, ...prev.slice(0, 11)]);
+        setRecentBrands(prev => [{ brand, logo, timestamp: Date.now() }, ...prev.slice(0, 101)]);
       }
     }, intervalTime);
     
@@ -228,7 +222,7 @@ const RFDashboard = () => {
     return Object.keys(packetFrequency)
       .map(time => ({ time, count: packetFrequency[time] }))
       .sort((a, b) => a.time.localeCompare(b.time))
-      .slice(-12);
+      .slice(-102);
   }, [packetFrequency]);
 
   const currentTires = data.length >= 4 ? data.slice(-4) : (data.length > 0 ? [data[data.length-1]] : []);
