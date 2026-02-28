@@ -1,12 +1,23 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, BarChart, Bar, Cell } from 'recharts';
-import { Activity, Gauge, Thermometer, Battery, Car, Radio, AlertTriangle, PieChart as PieChartIcon } from 'lucide-react';
+import { Activity, Gauge, Thermometer, Battery, Car, Radio, AlertTriangle, PieChart as PieChartIcon, History } from 'lucide-react';
 
-// Mock Data Generator (Based on your Hyundai-VDO format)
-const MODELS = ["Hyundai-VDO", "Toyota-TPMS", "Ford-TPMS", "Schrader-EVO", "Continental-G5"];
-const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
+// Brand & Logo Mapping using Brandfetch Logo API
+const PUBLIC_KEY = '1idBq3T9KsMrIZ385yb';
+const BRANDS = [
+  { name: "Hyundai", logo: `https://cdn.brandfetch.io/hyundai.com?c=${PUBLIC_KEY}` },
+  { name: "Toyota", logo: `https://cdn.brandfetch.io/toyota.com?c=${PUBLIC_KEY}` },
+  { name: "Ford", logo: `https://cdn.brandfetch.io/ford.com?c=${PUBLIC_KEY}` },
+  { name: "Chevrolet", logo: `https://cdn.brandfetch.io/chevrolet.com?c=${PUBLIC_KEY}` },
+  { name: "Mercedes", logo: `https://cdn.brandfetch.io/mercedes-benz.com?c=${PUBLIC_KEY}` },
+  { name: "BMW", logo: `https://cdn.brandfetch.io/bmw.com?c=${PUBLIC_KEY}` },
+  { name: "Audi", logo: `https://cdn.brandfetch.io/audi.com?c=${PUBLIC_KEY}` },
+  { name: "Tesla", logo: `https://cdn.brandfetch.io/tesla.com?c=${PUBLIC_KEY}` }
+];
+
+const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4', '#ec4899', '#f97316'];
 
 const generateMockData = () => {
   const sensors = [
@@ -16,39 +27,49 @@ const generateMockData = () => {
     { id: 'd086e281', pos: 'Rear Right' }
   ];
   
-  const selectedModel = MODELS[Math.floor(Math.random() * MODELS.length)];
+  const selectedBrand = BRANDS[Math.floor(Math.random() * BRANDS.length)];
   
   return sensors.map(s => ({
     time: new Date().toLocaleTimeString(),
-    model: selectedModel,
+    model: selectedBrand.name,
+    logo: selectedBrand.logo,
     id: s.id,
     position: s.pos,
     pressure_kPa: (215 + Math.random() * 5).toFixed(2),
     temperature_C: (28 + Math.random() * 4).toFixed(1),
     maybe_battery: 56,
-    rssi: -Math.floor(Math.random() * 40 + 50) // Signal strength simulation
+    rssi: -Math.floor(Math.random() * 40 + 50)
   }));
 };
 
 const RFDashboard = () => {
   const [data, setData] = useState(generateMockData());
   const [modelCounts, setModelCounts] = useState({});
+  const [recentBrands, setRecentBrands] = useState([]);
+  const [isFastMode, setIsFastMode] = useState(false);
 
   // Simulate incoming live RF packets
   useEffect(() => {
+    const intervalTime = isFastMode ? 800 : 3000;
     const interval = setInterval(() => {
       const newData = generateMockData();
       setData(prev => [...prev.slice(-30), ...newData]);
       
-      // Update model counts for distribution
-      const model = newData[0].model;
+      const brand = newData[0].model;
+      const logo = newData[0].logo;
+      
+      // Update model counts
       setModelCounts(prev => ({
         ...prev,
-        [model]: (prev[model] || 0) + 1
+        [brand]: (prev[brand] || 0) + 1
       }));
-    }, 3000);
+
+      // Update sliding window of logos
+      setRecentBrands(prev => [{ brand, logo, timestamp: Date.now() }, ...prev.slice(0, 11)]);
+    }, intervalTime);
+    
     return () => clearInterval(interval);
-  }, []);
+  }, [isFastMode]);
 
   const distributionData = useMemo(() => {
     return Object.keys(modelCounts).map((model, index) => ({
@@ -64,18 +85,42 @@ const RFDashboard = () => {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 p-6 font-sans">
       {/* Header */}
-      <div className="flex justify-between items-center mb-8 border-b border-slate-800 pb-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-slate-800 pb-4 gap-4">
         <div>
           <h1 className="text-2xl font-bold flex items-center gap-2">
             <Radio className="text-blue-400" /> RF Tire Intelligence
           </h1>
           <p className="text-slate-400 text-sm">Monitoring ISM 433.92MHz / 315MHz</p>
         </div>
-        <div className="flex gap-4">
-          <div className="bg-slate-900 px-4 py-2 rounded-lg border border-slate-800">
-            <span className="text-xs text-slate-500 block">ACTIVE SENSORS</span>
-            <span className="text-xl font-mono text-green-400">04</span>
+        
+        {/* Brand Sliding Window */}
+        <div className="flex-1 max-w-2xl bg-slate-900/50 rounded-full border border-slate-800/50 px-4 py-2 overflow-hidden relative group">
+          <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-slate-950 to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-slate-950 to-transparent z-10"></div>
+          <div className="flex gap-6 items-center animate-in fade-in slide-in-from-right-4 duration-500">
+            {recentBrands.map((item, idx) => (
+              <div 
+                key={item.timestamp} 
+                className="flex-shrink-0 flex items-center gap-2 transition-all duration-300"
+                style={{ opacity: Math.max(0.2, 1 - idx * 0.15) }}
+              >
+                <div className="w-8 h-8 rounded-full bg-white/10 p-1 flex items-center justify-center border border-white/5">
+                  <img src={item.logo} alt={item.brand} className="w-6 h-6 rounded-full aspect-square" />
+                </div>
+                <span className="text-[10px] font-mono text-slate-400 hidden sm:block">{item.brand}</span>
+              </div>
+            ))}
+            {recentBrands.length === 0 && <span className="text-xs text-slate-600 italic">Waiting for signal...</span>}
           </div>
+        </div>
+
+        <div className="flex gap-4">
+          <button 
+            onClick={() => setIsFastMode(!isFastMode)}
+            className={`px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider transition-colors ${isFastMode ? 'bg-orange-500/20 text-orange-400 border border-orange-500/50' : 'bg-slate-800 text-slate-500 border border-slate-700'}`}
+          >
+            {isFastMode ? 'Fast Mode ON' : 'Normal Mode'}
+          </button>
           <div className="bg-slate-900 px-4 py-2 rounded-lg border border-slate-800">
             <span className="text-xs text-slate-500 block">EST. VEHICLES</span>
             <span className="text-xl font-mono text-blue-400">{String(totalVehiclesObserved).padStart(2, '0')}</span>
@@ -115,7 +160,7 @@ const RFDashboard = () => {
                   <YAxis 
                     dataKey="name" 
                     type="category" 
-                    width={100} 
+                    width={80} 
                     stroke="#94a3b8" 
                     fontSize={10}
                     tickLine={false}
@@ -143,10 +188,12 @@ const RFDashboard = () => {
           <div className="bg-slate-900 p-6 rounded-xl border border-slate-800">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-blue-500/10 rounded-full text-blue-400">
-                <Car size={32} />
+                {currentTires[0]?.logo ? (
+                   <img src={currentTires[0].logo} alt="brand" className="w-8 h-8 object-contain rounded-full" />
+                ) : <Car size={32} />}
               </div>
               <div>
-                <h2 className="text-xl font-bold">Vehicle Cluster: {currentTires[0]?.model || 'Scanning...'} Group</h2>
+                <h2 className="text-xl font-bold">Vehicle Cluster: {currentTires[0]?.model || 'Scanning...'}</h2>
                 <p className="text-slate-400 text-sm">Target ID Range: {currentTires[0]?.id || '...'} - {currentTires[3]?.id || '...'}</p>
               </div>
             </div>
