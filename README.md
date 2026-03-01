@@ -13,6 +13,8 @@ AWS_S3_PREFIX=sdk/hivemq/data/   # or whatever prefix your rule uses
 ## Description
 So this is a dashboard made to recieve data from a rtl_433 device to pick up on rf signals from tire pressure sensors on cars to predict what type of car it is or other characterisics. It is configured to have an AWS iot core linking a raspberry pi hooked to an antennna (running [rtl_433](https://github.com/merbanan/rtl_433)) to a AWS S3 bucket which is then linked to a dynamoDB which is read by this webapp. Made for cuhackit2026 hackathon.
 
+![Screenshot of the webapp showing various graphics like brands identified](ReadMeThumbnail.png)
+
 ## Getting Started
 
 First, run the development server:
