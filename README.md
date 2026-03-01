@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# NOTE
+Make sure you have a .env.local file made or it probably wont work, also got to do npm install to install the packages. .env.local example:
+```
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=YourKeyHere
+AWS_SECRET_ACCESS_KEY=YourKeyHere
+AWS_S3_BUCKET_NAME=raspberry-pi-mqtt-data-lake
+AWS_S3_PREFIX=sdk/hivemq/data/   # or whatever prefix your rule uses
+```
+
 ## Getting Started
 
 First, run the development server:
